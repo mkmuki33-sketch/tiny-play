@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinyPlay - Safe Baby Toys for 0-3 Years | Sensory & Developmental Toys</title>
+    <meta name="description" content="Discover safe, certified baby toys (0-3 years) designed for sensory and developmental growth. ISO certified, BPA-free, parent-approved.">
+    <meta name="keywords" content="baby toys, infant toys, sensory toys, developmental toys, 0-3 years, safe toys, certified toys">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #26215C;
+            background-color: #FFFFFF;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Header */
+        header {
+            background-color: #FFF5E6;
+            border-bottom: 1px solid #E0D5C7;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 24px;
+            font-weight: 600;
+            color: #D9734E;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            color: #5F5E5A;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav button:hover {
+            color: #D9734E;
+        }
+
+        .cart-icon {
+            position: relative;
+            font-size: 24px;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #E24B4A;
+            color: white;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #FFE5CC 0%, #FFF0DC 100%);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #26215C;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #5F5E5A;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #D9734E;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #C5542D;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #D9734E;
+            border: 2px solid #D9734E;
+        }
+
+        .btn-secondary:hover {
+            background: #FFF5E6;
+        }
+
+        .trust-badges {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: #5F5E5A;
+        }
+
+        /* Sections */
+        section {
+            padding: 3rem 0;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            color: #26215C;
+        }
+
+        .alt-bg {
+            background-color: #FFF9F5;
+        }
+
+        .highlight-bg {
+            background-color: #FFF5E6;
+        }
+
+        .dark-bg {
+            background-color: #2C2C2A;
+            color: white;
+        }
+
+        /* Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Age Categories */
+        .age-category {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #D3D1C7;
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .age-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .age-category .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .age-category h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #26215C;
+            margin-bottom: 0.5rem;
+        }
+
+        .age-category p {
+            font-size: 14px;
+            color: #888780;
+            margin-bottom: 1rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .badge-green {
+            background: #EAF3DE;
+            color: #3B6D11;
+        }
+
+        .badge-amber {
+            background: #FAEEDA;
+            color: #854F0B;
+        }
+
+        .badge-teal {
+            background: #E1F5EE;
+            color: #0F6E56;
+        }
+
+        .badge-pink {
+            background: #FBEAF0;
+            color: #72243E;
+        }
+
+        .badge-blue {
+            background: #E3F2FD;
+            color: #1565C0;
+        }
+
+        /* Product Card */
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #D3D1C7;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+            transform: translateY(-3px);
+        }
+
+        .product-image {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            background: linear-gradient(135deg, #E1F5EE 0%, #B0E8D1 100%);
+        }
+
+        .product-content {
+            padding: 1.25rem;
+        }
+
+        .product-category {
+            display: inline-block;
+            margin-bottom: 0.75rem;
+        }
+
+        .product-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #26215C;
+            margin: 0.5rem 0;
+        }
+
+        .product-description {
+            font-size: 13px;
+            color: #888780;
+            margin-bottom: 1rem;
+        }
+
+        .product-type {
+            font-size: 12px;
+            color: #D9734E;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .stars {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .star {
+            color: #FFC107;
+        }
+
+        .star.empty {
+            color: #D3D1C7;
+        }
+
+        .review-count {
+            color: #5F5E5A;
+            font-size: 12px;
+            margin-left: 0.5rem;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: 700;
+            color: #26215C;
+        }
+
+        .original-price {
+            font-size: 13px;
+            color: #888780;
+            text-decoration: line-through;
+            margin-left: 0.5rem;
+        }
+
+        .btn-small {
+            background: #D9734E;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-small:hover {
+            background: #C5542D;
+        }
+
+        .certifications {
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid #D3D1C7;
+            font-size: 12px;
+            color: #26215C;
+            font-weight: 500;
+        }
+
+        .certifications div {
+            margin-bottom: 0.25rem;
+        }
+
+        /* Category Filter */
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .filter-btn {
+            background: white;
+            border: 1px solid #D3D1C7;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            color: #5F5E5A;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #D9734E;
+            color: white;
+            border-color: #D9734E;
+        }
+
+        /* Reviews */
+        .review-card {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #D3D1C7;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .review-text {
+            margin: 1rem 0;
+            color: #26215C;
+            font-weight: 500;
+        }
+
+        .review-author {
+            color: #888780;
+            font-size: 14px;
+        }
+
+        /* Safety Section */
+        .safety-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .safety-item .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .safety-item h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #26215C;
+            margin-bottom: 0.5rem;
+        }
+
+        .safety-item p {
+            font-size: 13px;
+            color: #888780;
+            margin: 0;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #D9734E 0%, #C5542D 100%);
+            padding: 3rem 0;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2C2C2A;
+            color: #B4B2A9;
+            padding: 2rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        footer h4 {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 14px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: #B4B2A9;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #D9734E;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #5F5E5A;
+            padding-top: 1.5rem;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                gap: 1rem;
+            }
+
+            nav button {
+                padding: 0.5rem 0.5rem;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+
+            .trust-badges {
+                gap: 1rem;
+                font-size: 12px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-buttons {
+                gap: 0.5rem;
+            }
+
+            .filter-btn {
+                padding: 0.4rem 1rem;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span>🎀</span> TinyPlay
+            </div>
+            <nav>
+                <button>Shop</button>
+                <button>About</button>
+                <button>Safety</button>
+                <button class="cart-icon">
+                    🛒
+                    <span class="cart-count">3</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Safe, Sensory-Rich Toys for Tiny Explorers</h1>
+            <p>Carefully curated toys designed to develop your baby's senses and create magical moments. Every product is safety-tested and parent-approved.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Explore Now</button>
+                <button class="btn btn-secondary">Learn More</button>
+            </div>
+            <div class="trust-badges">
+                <div>✓ ISO 8124 Certified</div>
+                <div>✓ 1000+ Happy Parents</div>
+                <div>✓ 30-Day Returns</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Age Categories -->
+    <section>
+        <div class="container">
+            <h2>Browse by Age & Stage</h2>
+            <div class="grid">
+                <div class="age-category">
+                    <div class="icon">👶</div>
+                    <h3>0-6 Months</h3>
+                    <p>Sensory & Touch Development</p>
+                    <span class="badge badge-green">15 Products</span>
+                </div>
+                <div class="age-category">
+                    <div class="icon">🎾</div>
+                    <h3>6-12 Months</h3>
+                    <p>Grasping & Motor Skills</p>
+                    <span class="badge badge-amber">20 Products</span>
+                </div>
+                <div class="age-category">
+                    <div class="icon">🧩</div>
+                    <h3>12-24 Months</h3>
+                    <p>Problem-Solving Play</p>
+                    <span class="badge badge-teal">25 Products</span>
+                </div>
+                <div class="age-category">
+                    <div class="icon">🎨</div>
+                    <h3>2-3 Years</h3>
+                    <p>Imaginative & Creative Play</p>
+                    <span class="badge badge-pink">20 Products</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products with Categories -->
+    <section class="alt-bg">
+        <div class="container">
+            <h2>Best Sellers This Month</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons">
+                <button class="filter-btn active">All Products</button>
+                <button class="filter-btn">Sensory Toys</button>
+                <button class="filter-btn">Play Toys</button>
+                <button class="filter-btn">Educational</button>
+                <button class="filter-btn">Musical</button>
+            </div>
+
+            <div class="grid">
+                <!-- Product 1: Sensory Rattle Ring -->
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #E1F5EE 0%, #B0E8D1 100%);">🪀</div>
+                    <div class="product-content">
+                        <span class="product-type">Sensory Toy</span>
+                        <span class="badge badge-teal product-category">0-6 months</span>
+                        <h3>Sensory Rattle Ring</h3>
+                        <p class="product-description">Develops grasping and auditory senses with multiple textures</p>
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="review-count">248 reviews</span>
+                        </div>
+                        <div class="product-footer">
+                            <div>
+                                <span class="price">₹299</span>
+                                <span class="original-price">₹399</span>
+                            </div>
+                            <button class="btn-small">Add to Cart</button>
+                        </div>
+                        <div class="certifications">
+                            <div>✓ ISO 8124 Certified</div>
+                            <div>✓ BPA-Free</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Stacking Blocks -->
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #FBEAF0 0%, #F4A8C1 100%);">🧩</div>
+                    <div class="product-content">
+                        <span class="product-type">Educational Toy</span>
+                        <span class="badge badge-amber product-category">6-12 months</span>
+                        <h3>Stacking Blocks Set</h3>
+                        <p class="product-description">Build motor skills and spatial awareness with colorful blocks</p>
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star empty">★</span>
+                            <span class="review-count">156 reviews</span>
+                        </div>
+                        <div class="product-footer">
+                            <div>
+                                <span class="price">₹549</span>
+                                <span class="original-price">₹699</span>
+                            </div>
+                            <button class="btn-small">Add to Cart</button>
+                        </div>
+                        <div class="certifications">
+                            <div>✓ Non-Toxic Paint</div>
+                            <div>✓ Smooth Edges</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Musical Activity Mat -->
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #E6F1FB 0%, #9FC8F0 100%);">🎨</div>
+                    <div class="product-content">
+                        <span class="product-type">Musical Toy</span>
+                        <span class="badge badge-teal product-category">2-3 years</span>
+                        <h3>Musical Activity Mat</h3>
+                        <p class="product-description">Explore sounds while developing fine motor skills</p>
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="review-count">389 reviews</span>
+                        </div>
+                        <div class="product-footer">
+                            <div>
+                                <span class="price">₹1,299</span>
+                                <span class="original-price">₹1,599</span>
+                            </div>
+                            <button class="btn-small">Add to Cart</button>
+                        </div>
+                        <div class="certifications">
+                            <div>✓ Lead-Free</div>
+                            <div>✓ Machine Washable</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: Teething Toy -->
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #FFE5CC 0%, #FFC9A3 100%);">🍼</div>
+                    <div class="product-content">
+                        <span class="product-type">Teething Toy</span>
+                        <span class="badge badge-green product-category">4-8 months</span>
+                        <h3>Soft Teething Ring</h3>
+                        <p class="product-description">Soothes sore gums with textured silicone surface</p>
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="review-count">312 reviews</span>
+                        </div>
+                        <div class="product-footer">
+                            <div>
+                                <span class="price">₹249</span>
+                                <span class="original-price">₹349</span>
+                            </div>
+                            <button class="btn-small">Add to Cart</button>
+                        </div>
+                        <div class="certifications">
+                            <div>✓ Freezer Safe</div>
+                            <div>✓ FDA Approved</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5: Play Gym -->
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #F3E5AB 0%, #E8D4A8 100%);">🎪</div>
+                    <div class="product-content">
+                        <span class="product-type">Play Gym</span>
+                        <span class="badge badge-amber product-category">0-6 months</span>
+                        <h3>Baby Play Gym Mat</h3>
+                        <p class="product-description">Interactive play gym with hanging toys and mirrors</p>
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="review-count">425 reviews</span>
+                        </div>
+                        <div class="product-footer">
+                            <div>
+                                <span class="price">₹1,899</span>
+                                <span class="original-price">₹2,299</span>
+                            </div>
+                            <button class="btn-small">Add to Cart</button>
+                        </div>
+                        <div class="certifications">
+                            <div>✓ Portable & Foldable</div>
+                            <div>✓ Washable Cover</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6: Shape Sorter -->
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #FFD6E8 0%, #FF9AC5 100%);">🎁</div>
+                    <div class="product-content">
+                        <span class="product-type">Educational Toy</span>
+                        <span class="badge badge-pink product-category">12-24 months</span>
+                        <h3>Shape Sorter Toy</h3>
+                        <p class="product-description">Learn shapes and colors while developing problem-solving skills</p>
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="review-count">267 reviews</span>
+                        </div>
+                        <div class="product-footer">
+                            <div>
+                                <span class="price">₹399</span>
+                                <span class="original-price">₹599</span>
+                            </div>
+                            <button class="btn-small">Add to Cart</button>
+                        </div>
+                        <div class="certifications">
+                            <div>✓ Colorfast Paint</div>
+                            <div>✓ Rounded Corners</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7: Bubble Machine -->
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #BBDEFB 0%, #64B5F6 100%);">🫧</div>
+                    <div class="product-content">
+                        <span class="product-type">Play Toy</span>
+                        <span class="badge badge-blue product-category">2-3 years</span>
+                        <h3>Automatic Bubble Machine</h3>
+                        <p class="product-description">Endless fun with automatic bubble production</p>
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star empty">★</span>
+                            <span class="review-count">189 reviews</span>
+                        </div>
+                        <div class="product-footer">
+                            <div>
+                                <span class="price">₹799</span>
+                                <span class="original-price">₹999</span>
+                            </div>
+                            <button class="btn-small">Add to Cart</button>
+                        </div>
+                        <div class="certifications">
+                            <div>✓ Battery Operated</div>
+                            <div>✓ Outdoor Safe</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8: Soft Ball Set -->
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #C8E6C9 0%, #81C784 100%);">⚽</div>
+                    <div class="product-content">
+                        <span class="product-type">Play Toy</span>
+                        <span class="badge badge-green product-category">6-12 months</span>
+                        <h3>Sensory Soft Ball Set</h3>
+                        <p class="product-description">Multiple textures and bright colors for tactile exploration</p>
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="review-count">278 reviews</span>
+                        </div>
+                        <div class="product-footer">
+                            <div>
+                                <span class="price">₹449</span>
+                                <span class="original-price">₹599</span>
+                            </div>
+                            <button class="btn-small">Add to Cart</button>
+                        </div>
+                        <div class="certifications">
+                            <div>✓ Soft Fabric</div>
+                            <div>✓ Safe to Chew</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9: Xylophone -->
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #F8BBD0 0%, #F48FB1 100%);">🎵</div>
+                    <div class="product-content">
+                        <span class="product-type">Musical Toy</span>
+                        <span class="badge badge-pink product-category">18-36 months</span>
+                        <h3>Colorful Xylophone</h3>
+                        <p class="product-description">Learn music and colors with this interactive xylophone</p>
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="review-count">334 reviews</span>
+                        </div>
+                        <div class="product-footer">
+                            <div>
+                                <span class="price">₹649</span>
+                                <span class="original-price">₹849</span>
+                            </div>
+                            <button class="btn-small">Add to Cart</button>
+                        </div>
+                        <div class="certifications">
+                            <div>✓ Real Metal Bars</div>
+                            <div>✓ Wooden Frame</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section>
+        <div class="container">
+            <h2>What Parents Love About TinyPlay</h2>
+            <div class="grid">
+                <div class="review-card">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="review-text">"My 4-month-old is absolutely mesmerized by the sensory rattle. High quality and safe! Best purchase!"</p>
+                    <p class="review-author">- Priya M., Bangalore</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="review-text">"The play gym is amazing! My baby spends hours exploring. Highly recommend for newborns."</p>
+                    <p class="review-author">- Anjali K., Mumbai</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star empty">★</span>
+                    </div>
+                    <p class="review-text">"Love the shape sorter! My toddler is learning shapes so quickly. Safe and well-made!"</p>
+                    <p class="review-author">- Sarah T., Pune</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety -->
+    <section class="highlight-bg">
+        <div class="container">
+            <h2>Safety First, Always</h2>
+            <div class="safety-grid">
+                <div class="safety-item">
+                    <div class="icon">🔒</div>
+                    <h3>Certified Safe</h3>
+                    <p>ISO 8124-1 certified, tested for toxins</p>
+                </div>
+                <div class="safety-item">
+                    <div class="icon">✓</div>
+                    <h3>BPA & Lead Free</h3>
+                    <p>Non-toxic materials only</p>
+                </div>
+                <div class="safety-item">
+                    <div class="icon">👨‍👩‍👧</div>
+                    <h3>Parent Tested</h3>
+                    <p>1000+ parents trust our selection</p>
+                </div>
+                <div class="safety-item">
+                    <div class="icon">🔄</div>
+                    <h3>Easy Returns</h3>
+                    <p>30-day money-back guarantee</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Give Your Baby the Best Start?</h2>
+            <p>Join 1000+ happy families and shop our complete collection today.</p>
+            <button class="btn btn-primary">Shop Complete Collection</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Safety Standards</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 TinyPlay. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
